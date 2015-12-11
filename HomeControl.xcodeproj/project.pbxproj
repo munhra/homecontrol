@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B2C6D05D1C189465005E994E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D05C1C189465005E994E /* AppDelegate.swift */; };
-		B2C6D05F1C189465005E994E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D05E1C189465005E994E /* ViewController.swift */; };
 		B2C6D0621C189465005E994E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0601C189465005E994E /* Main.storyboard */; };
 		B2C6D0641C189465005E994E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0631C189465005E994E /* Assets.xcassets */; };
 		B2C6D0671C189465005E994E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0651C189465005E994E /* LaunchScreen.storyboard */; };
 		B2C6D0721C189465005E994E /* HomeControlTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D0711C189465005E994E /* HomeControlTests.swift */; };
 		B2C6D07D1C189465005E994E /* HomeControlUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D07C1C189465005E994E /* HomeControlUITests.swift */; };
+		B2C6D08C1C19AE91005E994E /* IOTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D08B1C19AE91005E994E /* IOTService.swift */; };
+		B2C6D0911C19AF73005E994E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D0901C19AF73005E994E /* MainViewController.swift */; };
+		B2C6D0971C19FE4B005E994E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D0961C19FE4B005E994E /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		B2C6D0591C189465005E994E /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C6D05C1C189465005E994E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2C6D05E1C189465005E994E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2C6D0611C189465005E994E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2C6D0631C189465005E994E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2C6D0661C189465005E994E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		B2C6D0781C189465005E994E /* HomeControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C6D07C1C189465005E994E /* HomeControlUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControlUITests.swift; sourceTree = "<group>"; };
 		B2C6D07E1C189465005E994E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2C6D08B1C19AE91005E994E /* IOTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IOTService.swift; sourceTree = "<group>"; };
+		B2C6D0901C19AF73005E994E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B2C6D0961C19FE4B005E994E /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,12 @@
 		B2C6D05B1C189465005E994E /* HomeControl */ = {
 			isa = PBXGroup;
 			children = (
+				B2C6D08F1C19AEF5005E994E /* Model */,
+				B2C6D08D1C19AEE5005E994E /* View */,
+				B2C6D08E1C19AEED005E994E /* Controller */,
+				B2C6D08A1C19AE71005E994E /* Service */,
 				B2C6D05C1C189465005E994E /* AppDelegate.swift */,
-				B2C6D05E1C189465005E994E /* ViewController.swift */,
-				B2C6D0601C189465005E994E /* Main.storyboard */,
 				B2C6D0631C189465005E994E /* Assets.xcassets */,
-				B2C6D0651C189465005E994E /* LaunchScreen.storyboard */,
 				B2C6D0681C189465005E994E /* Info.plist */,
 			);
 			path = HomeControl;
@@ -123,6 +128,39 @@
 				B2C6D07E1C189465005E994E /* Info.plist */,
 			);
 			path = HomeControlUITests;
+			sourceTree = "<group>";
+		};
+		B2C6D08A1C19AE71005E994E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6D08B1C19AE91005E994E /* IOTService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		B2C6D08D1C19AEE5005E994E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6D0601C189465005E994E /* Main.storyboard */,
+				B2C6D0651C189465005E994E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B2C6D08E1C19AEED005E994E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6D0901C19AF73005E994E /* MainViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B2C6D08F1C19AEF5005E994E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2C6D0961C19FE4B005E994E /* HomeModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2C6D05F1C189465005E994E /* ViewController.swift in Sources */,
+				B2C6D0971C19FE4B005E994E /* HomeModel.swift in Sources */,
+				B2C6D08C1C19AE91005E994E /* IOTService.swift in Sources */,
 				B2C6D05D1C189465005E994E /* AppDelegate.swift in Sources */,
+				B2C6D0911C19AF73005E994E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +522,7 @@
 				B2C6D0831C189465005E994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2C6D0841C189465005E994E /* Build configuration list for PBXNativeTarget "HomeControlTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +531,7 @@
 				B2C6D0861C189465005E994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B2C6D0871C189465005E994E /* Build configuration list for PBXNativeTarget "HomeControlUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +540,7 @@
 				B2C6D0891C189465005E994E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
