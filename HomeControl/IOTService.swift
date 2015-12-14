@@ -21,94 +21,14 @@ class IOTService {
     
     func fetchTemperature(fetchedHomeTemperatureCallBack:(Int, NSError?, HomeModel?) -> ()){
         
-        let usersURL = NSURL(string: "http://172.21.110.209:3000/temperature")
-        let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest(URL: usersURL!)
-        
-        request.HTTPMethod = "GET"
-        let dataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
-            print("Response arrived")
-            
-            var statusCode:Int = -1
-            if let nsurlResponse = response as? NSHTTPURLResponse {
-                statusCode = nsurlResponse.statusCode
-            }
-            if let _ = data {
-                if statusCode == 200 {
-                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                        fetchedHomeTemperatureCallBack(200,nil,self.convertJsonToHomeControl(data!))
-                    })
-                }
-            }else{
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    fetchedHomeTemperatureCallBack(statusCode,error,nil)
-                })
-            }
-        }
-        dataTask.resume()
     }
     
     func switchLamp(state:Bool,switchLampCallBack:(Int, NSError?) -> ()) {
         
-        let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
-        let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest(URL: usersURL!)
-        
-
-        let requestBody = "{\"lampstate\":\(state)}"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.HTTPBody = requestBody.dataUsingEncoding(NSUTF8StringEncoding)
-        request.HTTPMethod = "POST"
-        
-        let dataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
-            print("Response arrived")
-            
-            var statusCode:Int = -1
-            if let nsurlResponse = response as? NSHTTPURLResponse {
-                statusCode = nsurlResponse.statusCode
-            }
-            if let _ = data {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    switchLampCallBack(statusCode,nil)
-                })
-                
-            }else{
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    switchLampCallBack(statusCode,error)
-                })
-            }
-        }
-        dataTask.resume()
     }
     
     func fetchLampState(switchLampCallBack:(Int, NSError?) -> ()) {
         
-        let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
-        let session = NSURLSession.sharedSession()
-        let request = NSMutableURLRequest(URL: usersURL!)
-        
-        request.HTTPMethod = "GET"
-        
-        let dataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
-            print("Response arrived")
-            
-            var statusCode:Int = -1
-            if let nsurlResponse = response as? NSHTTPURLResponse {
-                statusCode = nsurlResponse.statusCode
-            }
-            if let _ = data {
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    switchLampCallBack(statusCode,nil)
-                })
-                
-            }else{
-                dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                    switchLampCallBack(statusCode,error)
-                })
-            }
-        }
-        dataTask.resume()
-
     }
     
     func convertJsonToHomeControl(jsonObjectData:NSData) -> HomeModel? {
