@@ -18,9 +18,8 @@ class MainViewController:UIViewController{
         let tapGestureRecognize = UITapGestureRecognizer(target: self, action: Selector("fetchTemperature"))
         temperatureImage.userInteractionEnabled = true
         temperatureImage.addGestureRecognizer(tapGestureRecognize)
-        
         lampSwitch.addTarget(self, action: Selector("switchLamp"), forControlEvents: UIControlEvents.ValueChanged)
-        
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("fetchLampState"), userInfo: nil, repeats: true)
     }
     
     func fetchTemperature() {
@@ -34,15 +33,24 @@ class MainViewController:UIViewController{
     }
     
     func switchLamp() {
-        
         let oldState = !lampSwitch.on
-        
         IOTService.sharedInstance.switchLamp(lampSwitch.on){(statuscode,error) -> () in
             if let _ = error {
              self.lampSwitch.setOn(oldState, animated: true)
             }
         }
-        
+    }
+    
+    func fetchLampState() {
+        IOTService.sharedInstance.fetchLampState(){(statuscode,error) ->  () in
+            if error == nil {
+                if statuscode == 200 {
+                    self.lampSwitch.setOn(true, animated: true)
+                }else{
+                    self.lampSwitch.setOn(false, animated: true)
+                }
+            }
+        }
     }
     
 }

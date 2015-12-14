@@ -8,6 +8,11 @@
 
 import Foundation
 
+// API
+// Fetch temperature send GET to http://IOTCARD:XXXX/temperature receive as example {"value":34.10894050905481,"time":"11:30:90","date":"21/10/2014"}
+// Switch lamp on/of send POST with JSON {"lampstate":false} on body to http://IOTCARD:XXXX/switchlamp, receive statuscode 200 if on and 201 if off
+// Fetch lamp state send GET to http://IOTCARD:XXXX/switchlamp, receive statuscode 200 if on and 201 if off
+
 class IOTService {
     
     //Singleton Pattern
@@ -76,16 +81,34 @@ class IOTService {
         dataTask.resume()
     }
     
-    func fetchLampState() {
+    func fetchLampState(switchLampCallBack:(Int, NSError?) -> ()) {
         
-    }
-    
-    func startPoolingLampState(frequency:Float) {
+        let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
+        let session = NSURLSession.sharedSession()
+        let request = NSMutableURLRequest(URL: usersURL!)
         
-    }
-    
-    func stopPoolingLampState() {
+        request.HTTPMethod = "GET"
         
+        let dataTask = session.dataTaskWithRequest(request) { (data:NSData?, response:NSURLResponse?, error:NSError?) -> Void in
+            print("Response arrived")
+            
+            var statusCode:Int = -1
+            if let nsurlResponse = response as? NSHTTPURLResponse {
+                statusCode = nsurlResponse.statusCode
+            }
+            if let _ = data {
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    switchLampCallBack(statusCode,nil)
+                })
+                
+            }else{
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    switchLampCallBack(statusCode,error)
+                })
+            }
+        }
+        dataTask.resume()
+
     }
     
     func convertJsonToHomeControl(jsonObjectData:NSData) -> HomeModel? {
@@ -102,7 +125,6 @@ class IOTService {
             if (temperatureValue != nil) && (time != nil) && (date != nil) {
                 homeControl = HomeModel(temperatureValue: temperatureValue!, time: time!, date: date!);
             }
-            
             
         } catch {
             print("Invalid JSON Object")
