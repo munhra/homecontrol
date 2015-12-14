@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController:UIViewController{
     
+    @IBOutlet weak var lampSwitch: UISwitch!
+    @IBOutlet weak var temperatureLabel: UILabel!
     
     override func viewDidLoad() {
    
