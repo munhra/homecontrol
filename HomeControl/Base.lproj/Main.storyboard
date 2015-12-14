@@ -45,6 +45,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HouseIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5dE-vJ-H3E">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ya1-ya-tXV">
+                                <rect key="frame" x="-25" y="-15" width="51" height="31"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="0.48313140869140625" green="0.83513730764389038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -60,6 +63,7 @@
                             <constraint firstItem="shs-hm-Q4R" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="JCJ-B4-0YJ"/>
                             <constraint firstItem="eGy-O8-cGl" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Jpy-vw-FKG"/>
                             <constraint firstItem="fEm-zG-4xh" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.34" id="KLd-aj-ijY"/>
+                            <constraint firstItem="ya1-ya-tXV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PIH-kE-hru"/>
                             <constraint firstItem="eGy-O8-cGl" firstAttribute="leading" secondItem="shs-hm-Q4R" secondAttribute="leading" id="R1S-5T-fto"/>
                             <constraint firstItem="fEm-zG-4xh" firstAttribute="top" secondItem="JD2-RH-dJR" secondAttribute="bottom" constant="1" id="Raa-Od-OJb"/>
                             <constraint firstItem="fEm-zG-4xh" firstAttribute="top" secondItem="T6w-LR-fRF" secondAttribute="bottom" constant="-120" id="V3o-5O-hqN"/>
@@ -77,6 +81,9 @@
                             <constraint firstItem="eGy-O8-cGl" firstAttribute="trailing" secondItem="shs-hm-Q4R" secondAttribute="trailing" id="mxP-oH-5mK"/>
                             <constraint firstItem="vd8-rL-Bbc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ocE-4w-eCc"/>
                             <constraint firstItem="JD2-RH-dJR" firstAttribute="top" secondItem="shs-hm-Q4R" secondAttribute="bottom" constant="1" id="qNn-Wm-UvX"/>
+                            <constraint firstItem="ya1-ya-tXV" firstAttribute="bottom" secondItem="JD2-RH-dJR" secondAttribute="bottom" id="rgU-z3-vVP">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-5"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -88,6 +95,7 @@
                                 <exclude reference="T6w-LR-fRF"/>
                                 <exclude reference="ZNo-PI-tAj"/>
                                 <exclude reference="5dE-vJ-H3E"/>
+                                <exclude reference="ya1-ya-tXV"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0Ot-IH-fHJ"/>
@@ -109,6 +117,8 @@
                                 <exclude reference="mjv-Dx-Sft"/>
                                 <exclude reference="qNn-Wm-UvX"/>
                                 <exclude reference="ocE-4w-eCc"/>
+                                <exclude reference="PIH-kE-hru"/>
+                                <exclude reference="rgU-z3-vVP"/>
                                 <exclude reference="A16-9r-GA3"/>
                                 <exclude reference="KLd-aj-ijY"/>
                                 <exclude reference="Raa-Od-OJb"/>
@@ -127,6 +137,7 @@
                                 <include reference="T6w-LR-fRF"/>
                                 <include reference="ZNo-PI-tAj"/>
                                 <include reference="5dE-vJ-H3E"/>
+                                <include reference="ya1-ya-tXV"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0Ot-IH-fHJ"/>
@@ -148,6 +159,8 @@
                                 <include reference="mjv-Dx-Sft"/>
                                 <include reference="qNn-Wm-UvX"/>
                                 <include reference="ocE-4w-eCc"/>
+                                <include reference="PIH-kE-hru"/>
+                                <include reference="rgU-z3-vVP"/>
                                 <include reference="A16-9r-GA3"/>
                                 <include reference="KLd-aj-ijY"/>
                                 <include reference="Raa-Od-OJb"/>
