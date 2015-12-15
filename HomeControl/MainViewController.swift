@@ -12,13 +12,17 @@ class MainViewController:UIViewController{
     
     @IBOutlet weak var lampSwitch: UISwitch!
     @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var temperatureImage: UIImageView!
     
     override func viewDidLoad() {
         lampSwitch.addTarget(self, action: Selector("switchLamp"), forControlEvents: UIControlEvents.ValueChanged)
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("fetchTemperature"))
+        temperatureImage.userInteractionEnabled = true
+        temperatureImage.addGestureRecognizer(tapGestureRecognizer)
     }
     
     func fetchTemperature() {
-    
+        print("fetchTemperature")
     }
     
     func switchLamp() {
