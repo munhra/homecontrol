@@ -14,7 +14,7 @@ class MainViewController:UIViewController{
     @IBOutlet weak var temperatureLabel: UILabel!
     
     override func viewDidLoad() {
-   
+        lampSwitch.addTarget(self, action: Selector("switchLamp"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func fetchTemperature() {
@@ -22,7 +22,7 @@ class MainViewController:UIViewController{
     }
     
     func switchLamp() {
-    
+        print("switchlamp changed state")
     }
     
     func fetchLampState() {
