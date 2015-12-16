@@ -19,7 +19,7 @@ class MainViewController:UIViewController{
         temperatureImage.userInteractionEnabled = true
         temperatureImage.addGestureRecognizer(tapGestureRecognize)
         lampSwitch.addTarget(self, action: Selector("switchLamp"), forControlEvents: UIControlEvents.ValueChanged)
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("fetchLampState"), userInfo: nil, repeats: true)
+        //NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("fetchLampState"), userInfo: nil, repeats: true)
     }
     
     func fetchTemperature() {
