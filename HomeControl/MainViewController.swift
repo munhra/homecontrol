@@ -19,14 +19,15 @@ class MainViewController:UIViewController{
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector("fetchTemperature"))
         temperatureImage.userInteractionEnabled = true
         temperatureImage.addGestureRecognizer(tapGestureRecognizer)
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("fetchLampState"), userInfo: nil, repeats: true)
+        //NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("fetchLampState"), userInfo: nil, repeats: true)
     }
     
     func fetchTemperature() {
         
         IOTService.sharedInstance.fetchTemperature()
         {(statuscode,error,homeModel) -> Void in
-
+            print("fetched temperature \(homeModel!.temperatureValue)")
+            self.temperatureLabel.text = "\(homeModel!.temperatureValue)"
         }
         print("fetchTemperature in progress ...")
         

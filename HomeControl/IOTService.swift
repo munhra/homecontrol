@@ -27,14 +27,15 @@ class IOTService {
         request.HTTPMethod = "GET"
         
         let dataTask = session.dataTaskWithRequest(request, completionHandler:
-            
             {(data:NSData?,response:NSURLResponse?,error:NSError?) -> Void in
-                print("dataTask response arrivide")
+                if let _ = data {
+                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        fetchedHomeTemperatureCallBack(200,nil,self.convertJsonToHomeControl(data!))
+                    })
+                }
             }
         )
-        
         dataTask.resume()
-    
     }
     
     func switchLamp(state:Bool,switchLampCallBack:(Int, NSError?) -> ()) {
