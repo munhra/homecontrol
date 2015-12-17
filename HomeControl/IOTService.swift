@@ -25,6 +25,15 @@ class IOTService {
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest(URL: temperatureURL!)
         request.HTTPMethod = "GET"
+        
+        let dataTask = session.dataTaskWithRequest(request, completionHandler:
+            
+            {(data:NSData?,response:NSURLResponse?,error:NSError?) -> Void in
+                print("dataTask response arrivide")
+            }
+        )
+        
+        dataTask.resume()
     
     }
     

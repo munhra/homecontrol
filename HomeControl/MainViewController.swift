@@ -23,7 +23,13 @@ class MainViewController:UIViewController{
     }
     
     func fetchTemperature() {
-        print("fetchTemperature")
+        
+        IOTService.sharedInstance.fetchTemperature()
+        {(statuscode,error,homeModel) -> Void in
+
+        }
+        print("fetchTemperature in progress ...")
+        
     }
     
     func switchLamp() {
