@@ -23,8 +23,8 @@ class IOTService {
     
     func fetchTemperature(fetchedHomeTemperatureCallBack:(Int, NSError?, HomeModel?) -> ()){
         
-        //let usersURL = NSURL(string: "http://172.21.110.209:3000/temperature")
-        let usersURL = NSURL(string: "http://172.20.3.61:85/temperature")
+        let usersURL = NSURL(string: "http://172.21.110.209:3000/temperature")
+        //let usersURL = NSURL(string: "http://172.20.3.61:85/temperature")
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest(URL: usersURL!)
         
@@ -51,8 +51,8 @@ class IOTService {
     
     func switchLamp(state:Bool,switchLampCallBack:(Int, NSError?) -> ()) {
         
-        //let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
-        let usersURL = NSURL(string: "http://172.20.3.61:85/switchlamp")
+        let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
+        //let usersURL = NSURL(string: "http://172.20.3.61:85/switchlamp")
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest(URL: usersURL!)
         
@@ -79,8 +79,8 @@ class IOTService {
     
     func fetchLampState(switchLampCallBack:(Int, NSError?) -> ()) {
         
-        //let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
-        let usersURL = NSURL(string: "http://172.20.3.61:85/switchlamp")
+        let usersURL = NSURL(string: "http://172.21.110.209:3000/switchlamp")
+        //let usersURL = NSURL(string: "http://172.20.3.61:85/switchlamp")
         let session = NSURLSession.sharedSession()
         let request = NSMutableURLRequest(URL: usersURL!)
         
