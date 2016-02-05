@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B21248141C63ACF000BDDCFB /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21248131C63ACF000BDDCFB /* HistoryTableViewController.swift */; };
 		B2C6D05D1C189465005E994E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D05C1C189465005E994E /* AppDelegate.swift */; };
 		B2C6D0621C189465005E994E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0601C189465005E994E /* Main.storyboard */; };
 		B2C6D0641C189465005E994E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0631C189465005E994E /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B21248131C63ACF000BDDCFB /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		B2C6D0591C189465005E994E /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C6D05C1C189465005E994E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C6D0611C189465005E994E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B2C6D0901C19AF73005E994E /* MainViewController.swift */,
+				B21248131C63ACF000BDDCFB /* HistoryTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				B2C6D08C1C19AE91005E994E /* IOTService.swift in Sources */,
 				B2C6D05D1C189465005E994E /* AppDelegate.swift in Sources */,
 				B2C6D0911C19AF73005E994E /* MainViewController.swift in Sources */,
+				B21248141C63ACF000BDDCFB /* HistoryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

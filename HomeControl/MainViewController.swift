@@ -14,6 +14,8 @@ class MainViewController:UIViewController{
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var temperatureImage: UIImageView!
     
+    var homeInfoList:Array<HomeModel> = Array<HomeModel>()
+    
     override func viewDidLoad() {
         let tapGestureRecognize = UITapGestureRecognizer(target: self, action: Selector("fetchTemperature"))
         temperatureImage.userInteractionEnabled = true
@@ -28,6 +30,7 @@ class MainViewController:UIViewController{
             if let fetchedHomeModel = homeModel {
                 print("fetch temperature \(fetchedHomeModel.temperatureValue)")
                 self.temperatureLabel.text = String(format: "%.1f°", fetchedHomeModel.temperatureValue)
+                self.homeInfoList.append(fetchedHomeModel)
             }
         }
     }
@@ -51,6 +54,13 @@ class MainViewController:UIViewController{
                 }
             }
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        let historyTableViewController = segue.destinationViewController as? HistoryTableViewController
+        historyTableViewController!.tableViewHomeInfoArray = homeInfoList
+        
     }
     
 }
