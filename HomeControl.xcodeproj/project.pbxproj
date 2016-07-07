@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B21248141C63ACF000BDDCFB /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21248131C63ACF000BDDCFB /* HistoryTableViewController.swift */; };
+		B24D7FDC1D2AA87D00889E49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D7FDB1D2AA87D00889E49 /* AppDelegate.swift */; };
+		B24D7FDE1D2AA87D00889E49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D7FDD1D2AA87D00889E49 /* ViewController.swift */; };
+		B24D7FE11D2AA87D00889E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24D7FDF1D2AA87D00889E49 /* Main.storyboard */; };
+		B24D7FE31D2AA87E00889E49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B24D7FE21D2AA87E00889E49 /* Assets.xcassets */; };
+		B24D7FEC1D2AD16C00889E49 /* IOTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D7FEB1D2AD16C00889E49 /* IOTService.swift */; };
+		B24D7FEF1D2AD1A200889E49 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24D7FEE1D2AD1A200889E49 /* HomeModel.swift */; };
 		B2C6D05D1C189465005E994E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C6D05C1C189465005E994E /* AppDelegate.swift */; };
 		B2C6D0621C189465005E994E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0601C189465005E994E /* Main.storyboard */; };
 		B2C6D0641C189465005E994E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2C6D0631C189465005E994E /* Assets.xcassets */; };
@@ -38,6 +44,14 @@
 
 /* Begin PBXFileReference section */
 		B21248131C63ACF000BDDCFB /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
+		B24D7FD91D2AA87D00889E49 /* HomeControlAppleTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControlAppleTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B24D7FDB1D2AA87D00889E49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B24D7FDD1D2AA87D00889E49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B24D7FE01D2AA87D00889E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B24D7FE21D2AA87E00889E49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B24D7FE41D2AA87E00889E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B24D7FEB1D2AD16C00889E49 /* IOTService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IOTService.swift; path = HomeControl/IOTService.swift; sourceTree = SOURCE_ROOT; };
+		B24D7FEE1D2AD1A200889E49 /* HomeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = HomeControl/HomeModel.swift; sourceTree = SOURCE_ROOT; };
 		B2C6D0591C189465005E994E /* HomeControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C6D05C1C189465005E994E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2C6D0611C189465005E994E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +70,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B24D7FD61D2AA87D00889E49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C6D0561C189465005E994E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -80,12 +101,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B24D7FDA1D2AA87D00889E49 /* HomeControlAppleTV */ = {
+			isa = PBXGroup;
+			children = (
+				B24D7FED1D2AD18300889E49 /* Model */,
+				B24D7FE81D2AD12700889E49 /* Service */,
+				B24D7FDB1D2AA87D00889E49 /* AppDelegate.swift */,
+				B24D7FDD1D2AA87D00889E49 /* ViewController.swift */,
+				B24D7FDF1D2AA87D00889E49 /* Main.storyboard */,
+				B24D7FE21D2AA87E00889E49 /* Assets.xcassets */,
+				B24D7FE41D2AA87E00889E49 /* Info.plist */,
+			);
+			path = HomeControlAppleTV;
+			sourceTree = "<group>";
+		};
+		B24D7FE81D2AD12700889E49 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B24D7FEB1D2AD16C00889E49 /* IOTService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		B24D7FED1D2AD18300889E49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B24D7FEE1D2AD1A200889E49 /* HomeModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		B2C6D0501C189465005E994E = {
 			isa = PBXGroup;
 			children = (
 				B2C6D05B1C189465005E994E /* HomeControl */,
 				B2C6D0701C189465005E994E /* HomeControlTests */,
 				B2C6D07B1C189465005E994E /* HomeControlUITests */,
+				B24D7FDA1D2AA87D00889E49 /* HomeControlAppleTV */,
 				B2C6D05A1C189465005E994E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -96,6 +148,7 @@
 				B2C6D0591C189465005E994E /* HomeControl.app */,
 				B2C6D06D1C189465005E994E /* HomeControlTests.xctest */,
 				B2C6D0781C189465005E994E /* HomeControlUITests.xctest */,
+				B24D7FD91D2AA87D00889E49 /* HomeControlAppleTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,6 +222,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B24D7FD81D2AA87D00889E49 /* HomeControlAppleTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B24D7FE71D2AA87E00889E49 /* Build configuration list for PBXNativeTarget "HomeControlAppleTV" */;
+			buildPhases = (
+				B24D7FD51D2AA87D00889E49 /* Sources */,
+				B24D7FD61D2AA87D00889E49 /* Frameworks */,
+				B24D7FD71D2AA87D00889E49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeControlAppleTV;
+			productName = HomeControlAppleTV;
+			productReference = B24D7FD91D2AA87D00889E49 /* HomeControlAppleTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 		B2C6D0581C189465005E994E /* HomeControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2C6D0811C189465005E994E /* Build configuration list for PBXNativeTarget "HomeControl" */;
@@ -228,12 +298,17 @@
 		B2C6D0511C189465005E994E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = venturus;
 				TargetAttributes = {
+					B24D7FD81D2AA87D00889E49 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 7H2Y5W6XAP;
+					};
 					B2C6D0581C189465005E994E = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 7H2Y5W6XAP;
 					};
 					B2C6D06C1C189465005E994E = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -261,11 +336,21 @@
 				B2C6D0581C189465005E994E /* HomeControl */,
 				B2C6D06C1C189465005E994E /* HomeControlTests */,
 				B2C6D0771C189465005E994E /* HomeControlUITests */,
+				B24D7FD81D2AA87D00889E49 /* HomeControlAppleTV */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B24D7FD71D2AA87D00889E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24D7FE31D2AA87E00889E49 /* Assets.xcassets in Resources */,
+				B24D7FE11D2AA87D00889E49 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C6D0571C189465005E994E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +378,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B24D7FD51D2AA87D00889E49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B24D7FEF1D2AD1A200889E49 /* HomeModel.swift in Sources */,
+				B24D7FDE1D2AA87D00889E49 /* ViewController.swift in Sources */,
+				B24D7FEC1D2AD16C00889E49 /* IOTService.swift in Sources */,
+				B24D7FDC1D2AA87D00889E49 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2C6D0551C189465005E994E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,6 +433,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B24D7FDF1D2AA87D00889E49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B24D7FE01D2AA87D00889E49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		B2C6D0601C189465005E994E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -356,6 +460,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B24D7FE51D2AA87E00889E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HomeControlAppleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.munhrasoft.HomeControlAppleTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B24D7FE61D2AA87E00889E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HomeControlAppleTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.munhrasoft.HomeControlAppleTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		B2C6D07F1C189465005E994E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,7 +579,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HomeControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vnt.HomeControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,7 +592,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = HomeControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vnt.HomeControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,6 +652,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B24D7FE71D2AA87E00889E49 /* Build configuration list for PBXNativeTarget "HomeControlAppleTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B24D7FE51D2AA87E00889E49 /* Debug */,
+				B24D7FE61D2AA87E00889E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		B2C6D0541C189465005E994E /* Build configuration list for PBXProject "HomeControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
